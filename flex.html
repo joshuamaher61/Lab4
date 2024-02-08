@@ -12,28 +12,28 @@ Description : Flex Layouts.
 <head>
     <title>Responsive Webpage Layout</title>
 	<!--
-		Ensure that your HTML file includes the viewport meta tag in the <head> section. 
+		Ensure that your HTML file includes the viewport meta tag in the <head> section.
 		This tag is essential for responsive design as it tells the browser how to control the page's dimensions and scaling.
 	-->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<style>	
 		/* Remove borders at the end, they have been add just for detecting positions of items*/	
-		div {
-			border: 1px dashed gray;	
-		}
-		.row{ 
-			border: 1px solid red;			
-		}
-		.large {
-			border: 1px solid blue;	
-		}
-		.medium {
-			border: 1px solid green;	
-		}
-		.small {
-			border: 1px solid yellow;	
-		}		
+		/*div {*/
+		/*	border: 1px dashed gray;	*/
+		/*}*/
+		/*.row{ */
+		/*	border: 1px solid red;			*/
+		/*}*/
+		/*.large {*/
+		/*	border: 1px solid blue;	*/
+		/*}*/
+		/*.medium {*/
+		/*	border: 1px solid green;	*/
+		/*}*/
+		/*.small {*/
+		/*	border: 1px solid yellow;	*/
+		/*}		*/
 	</style>
 
 	<style>
@@ -69,50 +69,83 @@ Description : Flex Layouts.
         img { max-width: 100%; height: auto; }
         .container { 
 			/*I need some CSS codes.*/
+
 		 }
         .header, .footer { background-color: #f2f2f2; text-align: center; padding: 10px; width: 100%;}
 		.body { 
 			/*I need some CSS codes.*/
+			display: flex;
 		}
         .main { 
 			padding: 15px; 
 			/*I need some CSS codes.*/
+			width: 100%;
 		}
         
         .news-item { padding: 10px; }
         .row { 
 			/*I need some CSS codes.*/
+			display: flex;
 		}
         
-
+		/*Computer*/
         @media screen and (min-width: 769px) {
-            .menu { width: 150px; }     
+            .menu { width: 150px; }
 			.large { 
 				/*I need some CSS codes.*/
+				width: 100%;
 			}
 			.medium { 
 				/*I need some CSS codes.*/
+				width: 70%;
 			}
 			.small { 
 				/*I need some CSS codes.*/
+				width: 30%;
 			 }       
         }
-
+		/*Tablet*/
         @media screen and (max-width: 768px) {
 			.body { 
 				/*I need some CSS codes.*/
+				/*width: 100%;*/
+				display: block;
 			}
-            .menu ul { 
+            .menu ul {
 				/*I need some CSS codes.*/
-			 }            
+				display: block;
+				overflow: hidden;
+			}
             /*I need some CSS codes.*/
+			.menu li {
+				float: left;
+			}
+			.menu a {
+				padding: 8px;
+			}
+			.large {
+				width: 100%;
+			}
+			.medium {
+				width: 60%;
+			}
+			.small {
+				width: 40%;
+			}
         }
-
+		/*Phone*/
         @media screen and (max-width: 480px) {
             .news-item header h1 { font-size: 18px; }
             .medium, .small { 
 				/*I need some CSS codes.*/
-			 }
+				width: 100%;
+			}
+			.body {
+				display: block;
+			}
+			.row {
+				display: block;
+			}
         }
     </style>
 </head>

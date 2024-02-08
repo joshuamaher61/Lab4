@@ -12,6 +12,6 @@
 
 ## Screenshots
 ### Exercise B
-![Exercise B](./ExerciseB.gif)
+![Exercise B](ExerciseB.gif)
 ### Exercise C
-![Exercise C](./ExerciseC.gif)
+![Exercise C](ExerciseC.gif)
